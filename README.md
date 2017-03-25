@@ -10,7 +10,7 @@ It knows how to do simple 1-arity math operations `square` and `negate`.
 
 then
 
-* `curl 'http://localhost:4000/square/4'`
-* `curl 'http://localhost:4000/negate/3'`
+* `curl 'http://localhost:4000/square/4'` => `16`
+* `curl 'http://localhost:4000/negate/3'` => `-3`
 
 etc.
