@@ -2,18 +2,18 @@ defmodule SampleApp.Web.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :sample_app_web,
-     version: "0.0.1",
-     build_path: "../../_build",
-     config_path: "../../config/config.exs",
-     deps_path: "../../deps",
-     lockfile: "../../mix.lock",
-     elixir: "~> 1.4",
-     elixirc_paths: elixirc_paths(Mix.env),
-     compilers: [:phoenix, :gettext] ++ Mix.compilers,
+    [app:             :sample_app_web,
+     version:         "0.0.1",
+     build_path:      "../../_build",
+     config_path:     "../../config/config.exs",
+     deps_path:       "../../deps",
+     lockfile:        "../../mix.lock",
+     elixir:          "~> 1.4",
+     elixirc_paths:   elixirc_paths(Mix.env),
+     compilers:       [:phoenix, :gettext] ++ Mix.compilers,
      start_permanent: Mix.env == :prod,
-     aliases: aliases(),
-     deps: deps()]
+     aliases:         aliases(),
+     deps:            deps()]
   end
 
   # Configuration for the OTP application.
@@ -25,8 +25,8 @@ defmodule SampleApp.Web.Mixfile do
   end
 
   # Specifies which paths to compile per environment.
-  defp elixirc_paths(:test), do: ["lib", "test/support"]
-  defp elixirc_paths(_),     do: ["lib"]
+  defp elixirc_paths(:test), do: ~w[lib test/support]
+  defp elixirc_paths(_),     do: ~w[lib]
 
   # Specifies your project dependencies.
   #
@@ -36,7 +36,7 @@ defmodule SampleApp.Web.Mixfile do
       {:cowboy,               "~> 1.0"},
       {:sample_app,           in_umbrella: true}, 
       {:gettext,              "~> 0.11"}, 
-      {:phoenix,              "~> 1.3.0-rc"},
+      {:phoenix,              "~> 1.3.0-rc.1"},
       {:phoenix_ecto,         "~> 3.2"},
       {:phoenix_html,         "~> 2.6"},
       {:phoenix_live_reload,  "~> 1.0", only: :dev},

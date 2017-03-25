@@ -1,4 +1,6 @@
 defmodule SampleApp.Web.Application do
+  @moduledoc "#{__MODULE__}"
+
   use Application
 
   def start(_type, _args) do
