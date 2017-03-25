@@ -14,27 +14,27 @@ NewNameWeb="${NewName}Web"
 new_name=$2
 new_name_web="${new_name}_web"
 
-perl -pi -e "s#SampleApp#${NewName}#g" apps/sample_app/README.md
-perl -pi -e "s#SampleApp#${NewName}#g" apps/sample_app/mix.exs
-perl -pi -e "s#SampleApp#${NewName}#g" apps/sample_app/*/*.ex*
-perl -pi -e "s#SampleApp#${NewName}#g" apps/sample_app/*/*/*.ex*
+sed -i "s#SampleApp#${NewName}#g" apps/sample_app/README.md
+sed -i "s#SampleApp#${NewName}#g" apps/sample_app/mix.exs
+sed -i "s#SampleApp#${NewName}#g" apps/sample_app/*/*.ex*
+sed -i "s#SampleApp#${NewName}#g" apps/sample_app/*/*/*.ex*
 
-perl -pi -e "s#sample_app#${new_name}#g" apps/sample_app/README.md
-perl -pi -e "s#sample_app#${new_name}#g" apps/sample_app/mix.exs
-perl -pi -e "s#sample_app#${new_name}#g" apps/sample_app/*/*.ex*
-perl -pi -e "s#sample_app#${new_name}#g" apps/sample_app/*/*/*.ex*
+sed -i "s#sample_app#${new_name}#g" apps/sample_app/README.md
+sed -i "s#sample_app#${new_name}#g" apps/sample_app/mix.exs
+sed -i "s#sample_app#${new_name}#g" apps/sample_app/*/*.ex*
+sed -i "s#sample_app#${new_name}#g" apps/sample_app/*/*/*.ex*
 
-perl -pi -e "s#SampleApp#${NewName}#g" apps/sample_app_web/README.md
-perl -pi -e "s#SampleApp#${NewName}#g" apps/sample_app_web/mix.exs
-perl -pi -e "s#SampleApp#${NewName}#g" apps/sample_app_web/*/*.e*
-perl -pi -e "s#SampleApp#${NewName}#g" apps/sample_app_web/*/*/*.e*
-perl -pi -e "s#SampleApp#${NewName}#g" apps/sample_app_web/*/*/*/*.e*
+sed -i "s#SampleApp#${NewName}#g" apps/sample_app_web/README.md
+sed -i "s#SampleApp#${NewName}#g" apps/sample_app_web/mix.exs
+sed -i "s#SampleApp#${NewName}#g" apps/sample_app_web/*/*.e*
+sed -i "s#SampleApp#${NewName}#g" apps/sample_app_web/*/*/*.e*
+sed -i "s#SampleApp#${NewName}#g" apps/sample_app_web/*/*/*/*.e*
 
-perl -pi -e "s#sample_app#${new_name}#g" apps/sample_app_web/README.md
-perl -pi -e "s#sample_app#${new_name}#g" apps/sample_app_web/mix.exs
-perl -pi -e "s#sample_app#${new_name}#g" apps/sample_app_web/*/*.e*
-perl -pi -e "s#sample_app#${new_name}#g" apps/sample_app_web/*/*/*.e*
-perl -pi -e "s#sample_app#${new_name}#g" apps/sample_app_web/*/*/*/*.e*
+sed -i "s#sample_app#${new_name}#g" apps/sample_app_web/README.md
+sed -i "s#sample_app#${new_name}#g" apps/sample_app_web/mix.exs
+sed -i "s#sample_app#${new_name}#g" apps/sample_app_web/*/*.e*
+sed -i "s#sample_app#${new_name}#g" apps/sample_app_web/*/*/*.e*
+sed -i "s#sample_app#${new_name}#g" apps/sample_app_web/*/*/*/*.e*
 
 mv apps/sample_app/lib/sample_app         apps/sample_app/lib/$new_name
 mv apps/sample_app                        apps/$new_name
