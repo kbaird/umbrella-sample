@@ -14,3 +14,15 @@ then
 * `curl 'http://localhost:4000/negate/3'` => `-3`
 
 etc.
+
+## How to Steal
+
+`rename Foo foo` will convert `SampleApp` -> `Foo` and `sample_app` -> `foo`
+
+probably a good move after that is
+
+1. `rm -rf .git`
+1. Various mods to get away from my contrived math examples
+1. `git init`
+
+etc.
