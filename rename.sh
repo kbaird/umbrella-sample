@@ -14,6 +14,10 @@ NewNameWeb="${NewName}Web"
 new_name=$2
 new_name_web="${new_name}_web"
 
+cd ..
+cp -r umbrella-sample $new_name
+cd $new_name
+
 sed -i "s#SampleApp#${NewName}#g" apps/sample_app/README.md
 sed -i "s#SampleApp#${NewName}#g" apps/sample_app/mix.exs
 sed -i "s#SampleApp#${NewName}#g" apps/sample_app/*/*.ex*
@@ -40,3 +44,9 @@ mv apps/sample_app/lib/sample_app         apps/sample_app/lib/$new_name
 mv apps/sample_app                        apps/$new_name
 mv apps/sample_app_web/lib/sample_app_web apps/sample_app_web/lib/$new_name_web
 mv apps/sample_app_web                    apps/$new_name_web
+
+rm -rf .git
+echo
+echo "Your new app is available at ../$new_name/, ready for git init or whatever else."
+echo
+
