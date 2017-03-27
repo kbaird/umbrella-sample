@@ -15,7 +15,7 @@ new_name=$2
 new_name_web="${new_name}_web"
 
 cd ..
-cp -r umbrella-sample $new_name
+cp -r umbrella-template $new_name
 cd $new_name
 
 sed -i "s#SampleApp#${NewName}#g" apps/sample_app/README.md
