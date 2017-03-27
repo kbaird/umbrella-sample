@@ -6,6 +6,8 @@ Demonstrates how to combine a thin web wrapper with a GenServer-based backend
 
 It knows how to do simple 1-arity math operations `square` and `negate`.
 
+These are just placeholders for whatever your real app's responsibilities will be.
+
 `mix phx.server`
 
 then
