@@ -17,12 +17,6 @@ etc.
 
 ## How to Steal
 
-`rename Foo foo` will convert `SampleApp` -> `Foo` and `sample_app` -> `foo`
+`copy_and_rename.sh Foo foo` will convert `SampleApp` -> `Foo` and `sample_app` -> `foo`
 
-probably a good move after that is
-
-1. `rm -rf .git`
-1. Various mods to get away from my contrived math examples
-1. `git init`
-
-etc.
+The resulting directory has no `.git/` directory, but can be initialized as desired.
