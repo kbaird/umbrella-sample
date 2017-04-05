@@ -11,8 +11,8 @@ defmodule SampleApp.Web.CalculationControllerTest do
   end
 
   test "reports 200 for square request", %{conn: conn} do
-    conn = get conn, calculation_path(conn, :show, "square", "2")
-    assert "4" == response(conn, 200)
+    conn = get conn, calculation_path(conn, :show, "square", "0.5")
+    assert "0.25" == response(conn, 200)
   end
 
 end

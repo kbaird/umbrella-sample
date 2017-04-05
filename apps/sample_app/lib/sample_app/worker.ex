@@ -7,14 +7,14 @@ defmodule SampleApp.Worker do
 
   # API
 
-  def negate(int) do
+  def negate(operand) do
     choose_worker_name() |> via_tuple()
-                         |> GenServer.call({:negate, int})
+                         |> GenServer.call({:negate, operand})
   end
 
-  def square(int) do
+  def square(operand) do
     choose_worker_name() |> via_tuple()
-                         |> GenServer.call({:square, int})
+                         |> GenServer.call({:square, operand})
   end
 
   def start_link(name) do
@@ -25,12 +25,12 @@ defmodule SampleApp.Worker do
 
   def init(messages), do: {:ok, messages}
 
-  def handle_call({:negate, int}, _from, state) do
-    {:reply, _negate(int), state}
+  def handle_call({:negate, operand}, _from, state) do
+    {:reply, _negate(operand), state}
   end
 
-  def handle_call({:square, int}, _from, state) do
-    {:reply, _square(int), state}
+  def handle_call({:square, operand}, _from, state) do
+    {:reply, _square(operand), state}
   end
 
   def handle_info(_msg, state), do: {:noreply, state}
@@ -45,8 +45,8 @@ defmodule SampleApp.Worker do
 
   ### PRIVATE FUNCTIONS
 
-  defp _negate(int), do: int * -1
-  defp _square(int), do: int * int
+  defp _negate(operand), do: operand * -1
+  defp _square(operand), do: operand * operand
 
   defp choose_worker_name do
     ### OPTIMIZE: something smarter than simple random
