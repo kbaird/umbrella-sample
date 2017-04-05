@@ -13,7 +13,7 @@ defmodule SampleApp.Web.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
-    get  "/:operation/:input",
+    get  "/:operation/:operand",
           CalculationController,
           :show
   end

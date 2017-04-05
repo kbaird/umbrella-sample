@@ -19,8 +19,8 @@ defmodule SampleApp do
       iex> GenServer.call(name, {"negate", -3})
       3
   """
-  def handle_call({"negate", int}, _from, state) do
-    {:reply, negate(int), state}
+  def handle_call({"negate", operand}, _from, state) do
+    {:reply, negate(operand), state}
   end
 
   @doc """
@@ -33,8 +33,8 @@ defmodule SampleApp do
       iex> GenServer.call(name, {"square", -3})
       9
   """
-  def handle_call({"square", int}, _from, state) do
-    {:reply, square(int), state}
+  def handle_call({"square", operand}, _from, state) do
+    {:reply, square(operand), state}
   end
 
   def start_link() do
@@ -43,7 +43,7 @@ defmodule SampleApp do
 
   ### PRIVATE FUNCTIONS
 
-  defp negate(int), do: Worker.negate(int)
-  defp square(int), do: Worker.square(int)
+  defp negate(operand), do: Worker.negate(operand)
+  defp square(operand), do: Worker.square(operand)
 
 end

@@ -16,8 +16,8 @@ defmodule SampleApp.Web.Math do
       iex> SampleApp.Web.Math.calculate({"square", -3})
       9
   """
-  def calculate({operation, input}) do
-    GenServer.call(@name, {operation, input})
+  def calculate({operation, operand}) do
+    GenServer.call(@name, {operation, operand})
   end
 
 end
