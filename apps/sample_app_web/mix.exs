@@ -39,7 +39,7 @@ defmodule SampleApp.Web.Mixfile do
       {:phoenix,              "~> 1.3.0-rc.1"},
       {:phoenix_ecto,         "~> 3.2"},
       {:phoenix_html,         "~> 2.6"},
-      {:phoenix_live_reload,  "~> 1.0", only: :dev},
+      #{:phoenix_live_reload,  "~> 1.0", only: :dev},
       {:phoenix_pubsub,       "~> 1.0"},
     ]
   end

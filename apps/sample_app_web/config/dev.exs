@@ -7,10 +7,12 @@ use Mix.Config
 # watchers to your application. For example, we use it
 # with brunch.io to recompile .js and .css sources.
 config :sample_app_web, SampleApp.Web.Endpoint,
-  http: [port: 4000],
-  debug_errors: true,
-  code_reloader: true,
-  check_origin: false,
+  http:          [port: 4000],
+  url:           [host: "localhost", port: 8080],
+  debug_errors:  true,
+  code_reloader: false,
+  check_origin:  false,
+  server:        true,
   watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
                     cd: Path.expand("../assets", __DIR__)]]
 

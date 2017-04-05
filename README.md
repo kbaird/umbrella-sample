@@ -1,5 +1,8 @@
 # SampleApp.Umbrella
 
+[![Build Status](https://semaphoreci.com/api/v1/kbaird/umbrella-template/branches/master/badge.svg)
+](https://semaphoreci.com/kbaird/umbrella-template)
+
 Demonstrates how to combine a thin web wrapper with a GenServer-based backend
 
 ## How to Use
