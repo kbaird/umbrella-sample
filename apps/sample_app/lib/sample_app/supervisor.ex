@@ -15,8 +15,7 @@ defmodule SampleApp.Supervisor do
   end
 
   def init(_) do
-    [public_worker() | workers()]
-    |> supervise(strategy: :one_for_one)
+    workers() |> supervise(strategy: :one_for_one)
   end
 
   def worker_names do
@@ -27,10 +26,6 @@ defmodule SampleApp.Supervisor do
 
   defp make_worker(name) do
     worker(Worker, [name], id: name)
-  end
-
-  defp public_worker do
-    worker(SampleApp, [])
   end
 
   defp workers do
