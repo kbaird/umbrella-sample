@@ -3,8 +3,6 @@ defmodule SampleApp.Web.Math do
   The boundary for the Math system.
   """
 
-  @name {:global, SampleApp}
-
   @doc """
   calculate
 
@@ -16,8 +14,7 @@ defmodule SampleApp.Web.Math do
       iex> SampleApp.Web.Math.calculate({"square", -3})
       9
   """
-  def calculate({operation, operand}) do
-    GenServer.call(@name, {operation, operand})
-  end
+  def calculate({"negate", operand}), do: SampleApp.negate(operand)
+  def calculate({"square", operand}), do: SampleApp.square(operand)
 
 end
