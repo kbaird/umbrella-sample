@@ -18,27 +18,25 @@ cd ..
 cp -r umbrella-template $new_name
 cd $new_name
 
-sed -i "s#SampleApp#${NewName}#g" apps/sample_app/README.md
-sed -i "s#SampleApp#${NewName}#g" apps/sample_app/mix.exs
-sed -i "s#SampleApp#${NewName}#g" apps/sample_app/*/*.ex*
-sed -i "s#SampleApp#${NewName}#g" apps/sample_app/*/*/*.ex*
+sed -i "s#SampleApp#${NewName}#g" apps/sample_app/README.md \
+                                  apps/sample_app/mix.exs \
+                                  apps/sample_app/*/*.ex* \
+                                  apps/sample_app/*/*/*.ex* \
+                                  apps/sample_app_web/README.md \
+                                  apps/sample_app_web/mix.exs \
+                                  apps/sample_app_web/*/*.e* \
+                                  apps/sample_app_web/*/*/*.e* \
+                                  apps/sample_app_web/*/*/*/*.e*
 
-sed -i "s#sample_app#${new_name}#g" apps/sample_app/README.md
-sed -i "s#sample_app#${new_name}#g" apps/sample_app/mix.exs
-sed -i "s#sample_app#${new_name}#g" apps/sample_app/*/*.ex*
-sed -i "s#sample_app#${new_name}#g" apps/sample_app/*/*/*.ex*
-
-sed -i "s#SampleApp#${NewName}#g" apps/sample_app_web/README.md
-sed -i "s#SampleApp#${NewName}#g" apps/sample_app_web/mix.exs
-sed -i "s#SampleApp#${NewName}#g" apps/sample_app_web/*/*.e*
-sed -i "s#SampleApp#${NewName}#g" apps/sample_app_web/*/*/*.e*
-sed -i "s#SampleApp#${NewName}#g" apps/sample_app_web/*/*/*/*.e*
-
-sed -i "s#sample_app#${new_name}#g" apps/sample_app_web/README.md
-sed -i "s#sample_app#${new_name}#g" apps/sample_app_web/mix.exs
-sed -i "s#sample_app#${new_name}#g" apps/sample_app_web/*/*.e*
-sed -i "s#sample_app#${new_name}#g" apps/sample_app_web/*/*/*.e*
-sed -i "s#sample_app#${new_name}#g" apps/sample_app_web/*/*/*/*.e*
+sed -i "s#sample_app#${new_name}#g" apps/sample_app/README.md \
+                                    apps/sample_app/mix.exs \
+                                    apps/sample_app/*/*.ex* \
+                                    apps/sample_app/*/*/*.ex* \
+                                    apps/sample_app_web/README.md \
+                                    apps/sample_app_web/mix.exs \
+                                    apps/sample_app_web/*/*.e* \
+                                    apps/sample_app_web/*/*/*.e* \
+                                    apps/sample_app_web/*/*/*/*.e*
 
 mv apps/sample_app/lib/sample_app         apps/sample_app/lib/$new_name
 mv apps/sample_app                        apps/$new_name
