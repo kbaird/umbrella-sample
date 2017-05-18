@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure for your application as:
 #
-#     config :sample_app, key: :value
+#     config :square, key: :value
 #
 # And access this configuration in your application as:
 #
-#     Application.get_env(:sample_app, :key)
+#     Application.get_env(:square, :key)
 #
 # Or configure a 3rd-party app:
 #

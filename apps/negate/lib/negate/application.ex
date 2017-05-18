@@ -1,10 +1,10 @@
-defmodule SampleApp.Application do
+defmodule Negate.Application do
   @moduledoc """
-  Documentation for SampleApp.Application
+  Documentation for Negate.Application
   """
   use Application
 
-  alias SampleApp.Supervisor
+  alias Negate.Supervisor
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
   # for more information on OTP Applications

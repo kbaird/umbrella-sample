@@ -14,7 +14,7 @@ defmodule SampleApp.Web.Math do
       iex> SampleApp.Web.Math.calculate({"square", -3})
       9
   """
-  def calculate({"negate", operand}), do: SampleApp.negate(operand)
-  def calculate({"square", operand}), do: SampleApp.square(operand)
+  def calculate({"negate", operand}), do: Negate.negate(operand)
+  def calculate({"square", operand}), do: Square.square(operand)
 
 end

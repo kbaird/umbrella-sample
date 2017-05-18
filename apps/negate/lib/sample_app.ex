@@ -1,9 +1,9 @@
-defmodule SampleApp do
+defmodule Negate do
   @moduledoc """
-  Documentation for SampleApp.
+  Documentation for Negate.
   """
 
-  alias SampleApp.Worker
+  alias Negate.Worker
 
   def negate(operand), do: Worker.negate(operand)
   def square(operand), do: Worker.square(operand)

@@ -1,6 +1,6 @@
-defmodule SampleAppTest do
+defmodule NegateTest do
   use ExUnit.Case
-  doctest SampleApp
+  doctest Negate
 
   test "the truth" do
     assert 1 + 1 == 2

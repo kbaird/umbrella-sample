@@ -34,8 +34,9 @@ defmodule SampleApp.Web.Mixfile do
   defp deps do
     [
       {:cowboy,               "~> 1.0"},
-      {:sample_app,           in_umbrella: true}, 
-      {:gettext,              "~> 0.11"}, 
+      {:negate,               in_umbrella: true},
+      {:square,               in_umbrella: true},
+      {:gettext,              "~> 0.11"},
       {:phoenix,              "~> 1.3.0-rc.1"},
       {:phoenix_ecto,         "~> 3.2"},
       {:phoenix_html,         "~> 2.6"},

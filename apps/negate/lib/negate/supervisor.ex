@@ -1,12 +1,12 @@
 # lib/chat/supervisor.ex
 
-defmodule SampleApp.Supervisor do
+defmodule Negate.Supervisor do
   @moduledoc """
-  Documentation for SampleApp.Supervisor
+  Documentation for Negate.Supervisor
   """
   use Supervisor
 
-  alias SampleApp.Worker
+  alias Negate.Worker
 
   @worker_count 20
 

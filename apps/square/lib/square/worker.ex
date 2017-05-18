@@ -1,6 +1,6 @@
-defmodule SampleApp.Worker do
+defmodule Square.Worker do
   @moduledoc """
-  Documentation for SampleApp.Worker.
+  Documentation for Square.Worker.
   """
   require Logger
   use GenServer
@@ -50,13 +50,13 @@ defmodule SampleApp.Worker do
 
   defp choose_worker_name do
     ### OPTIMIZE: something smarter than simple random
-    SampleApp.Supervisor.worker_names |> Enum.random()
+    Square.Supervisor.worker_names |> Enum.random()
   end
 
   defp via_tuple(worker_name) do
     # :n for unique name
     # :l for local scope
-    {:via, :gproc, {:n, :l, {:sample_app_worker, worker_name}}}
+    {:via, :gproc, {:n, :l, {:square_worker, worker_name}}}
   end
 
 end
